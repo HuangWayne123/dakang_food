@@ -9,7 +9,7 @@ import FAQ from './pages/FAQ';
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/food">
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
