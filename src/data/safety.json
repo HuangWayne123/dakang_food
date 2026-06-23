@@ -1,0 +1,48 @@
+{
+  "hero": {
+    "title": "食品安全体系",
+    "description": "安全是达康食品的生命线。我们以科技赋能，建立高于国家标准的“达康金盾”食安体系，实现从农田到餐桌的100%透明溯源。"
+  },
+  "heroImage": "https://picsum.photos/seed/lab/1920/1080?blur=4",
+  "pillars": [
+    {
+      "iconKey": "search",
+      "title": "源头品控",
+      "desc": "依托达康农业生态，对土壤、水源、种苗进行严苛检测，拒绝农残超标。"
+    },
+    {
+      "iconKey": "activity",
+      "title": "生产监控",
+      "desc": "十万级无尘车间，24小时AI视觉监控，关键控制点实时数据采集。"
+    },
+    {
+      "iconKey": "shield",
+      "title": "冷链护航",
+      "desc": "达康供应链集团专属冷链，全程温湿度实时监控，断链即刻报警拦截。"
+    },
+    {
+      "iconKey": "fileText",
+      "title": "一物一码",
+      "desc": "区块链防篡改溯源，消费者扫码即可查看产品前世今生。"
+    }
+  ],
+  "certifications": {
+    "title": "国际权威认证",
+    "description": "我们的生产基地与管理体系已通过多项国际顶级食品安全认证",
+    "items": ["ISO 22000", "HACCP 体系", "BRCGS 认证", "有机产品认证"]
+  },
+  "traceability": {
+    "title": "认知黑洞赋能：透明溯源",
+    "description": "借助集团内“认知黑洞”的AI、区块链与物联网前沿技术，我们为每一件商品赋予了唯一的“数字身份证”。消费者只需扫描包装上的二维码，即可获取详细的溯源报告。",
+    "points": [
+      "产地环境数据（温湿度、土壤报告）",
+      "种植/养殖日志与用药记录",
+      "加工车间实时环境与批次检验报告",
+      "冷链运输轨迹与温度曲线"
+    ],
+    "image": "https://picsum.photos/seed/trace/800/600",
+    "imageAlt": "溯源系统",
+    "statLabel": "累计溯源查询",
+    "statValue": "1.2亿+ 次"
+  }
+}
