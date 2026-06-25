@@ -2,6 +2,7 @@ import { Link, Outlet, useLocation } from 'react-router-dom';
 import { Leaf, Menu, X, ChevronRight, Phone, Mail, MapPin } from 'lucide-react';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
+import SiteInstrumentation from './SiteInstrumentation';
 
 const navLinks = [
   { name: '首页', path: '/' },
@@ -24,6 +25,7 @@ export default function Layout() {
 
   return (
     <div className="min-h-screen flex flex-col bg-slate-50">
+      <SiteInstrumentation />
       {/* Header */}
       <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -138,7 +140,7 @@ export default function Layout() {
                 </div>
               </div>
               <p className="text-sm text-slate-400 leading-relaxed">
-                致力于为全球亿万家庭提供安全、健康、高品质的食品。从田间到餐桌，全程可溯源，守护舌尖上的安全。
+                面向家庭零售、学校餐配、医院后勤和连锁餐饮场景，提供可追溯、高标准、稳定交付的食品与食材解决方案。
               </p>
               <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-800 border border-slate-700 text-xs font-medium text-slate-300">
                 <span className="w-2 h-2 rounded-full bg-primary-500"></span>
@@ -168,8 +170,10 @@ export default function Layout() {
                 {ecosystemLinks.map((eco) => (
                   <a
                     key={eco.name}
-                    href="#"
+                    href={eco.name === '达康控股' ? '/group/' : eco.name === '达康供应链集团' ? '/' : '/cognivora/'}
                     className="group block p-3 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 hover:border-primary-600/50 transition-all"
+                    data-analytics-event="ecosystem_nav_click"
+                    data-analytics-label={eco.name}
                   >
                     <div className="text-sm font-medium text-white group-hover:text-primary-400 transition-colors">
                       {eco.name}
@@ -190,11 +194,27 @@ export default function Layout() {
                 </li>
                 <li className="flex items-center gap-3 text-sm">
                   <Phone className="w-5 h-5 text-primary-500 shrink-0" />
-                  <span>400-888-8888</span>
+                  <a
+                    href="tel:4008888888"
+                    className="hover:text-white transition-colors"
+                    data-analytics-event="contact_click"
+                    data-analytics-channel="phone"
+                    data-analytics-label="食品站热线"
+                  >
+                    400-888-8888
+                  </a>
                 </li>
                 <li className="flex items-center gap-3 text-sm">
                   <Mail className="w-5 h-5 text-primary-500 shrink-0" />
-                  <span>contact@dakangfood.com</span>
+                  <a
+                    href="mailto:contact@dakangfood.com"
+                    className="hover:text-white transition-colors"
+                    data-analytics-event="contact_click"
+                    data-analytics-channel="email"
+                    data-analytics-label="食品站邮箱"
+                  >
+                    contact@dakangfood.com
+                  </a>
                 </li>
               </ul>
             </div>

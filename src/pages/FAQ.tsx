@@ -54,6 +54,9 @@ export default function FAQ() {
               <button
                 className="w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none"
                 onClick={() => setOpenIndex(openIndex === idx ? null : idx)}
+                data-analytics-event={openIndex !== idx ? 'faq_open' : undefined}
+                data-analytics-question={faq.q}
+                data-analytics-label="食品站 FAQ"
               >
                 <span className={`font-bold text-lg ${openIndex === idx ? 'text-primary-700' : 'text-slate-800'}`}>
                   {faq.q}
@@ -81,9 +84,15 @@ export default function FAQ() {
         <div className="mt-16 bg-primary-50 rounded-3xl p-8 text-center border border-primary-100">
           <h3 className="text-xl font-bold text-slate-900 mb-3">{content.contact.title}</h3>
           <p className="text-slate-600 mb-6">{content.contact.description}</p>
-          <button className="bg-primary-600 hover:bg-primary-700 text-white px-8 py-3 rounded-full font-bold transition-colors shadow-sm">
+          <a
+            href="mailto:contact@dakangfood.com?subject=%E8%BE%BE%E5%BA%B7%E9%A3%9F%E5%93%81%E5%92%A8%E8%AF%A2"
+            className="inline-flex bg-primary-600 hover:bg-primary-700 text-white px-8 py-3 rounded-full font-bold transition-colors shadow-sm"
+            data-analytics-event="contact_click"
+            data-analytics-channel="email"
+            data-analytics-label="食品站 FAQ 联系客服"
+          >
             {content.contact.buttonText}
-          </button>
+          </a>
         </div>
       </div>
     </div>
