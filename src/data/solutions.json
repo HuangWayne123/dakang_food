@@ -28,6 +28,17 @@
       "points": ["自有品牌联合开发", "产地直发一件代发", "生鲜标品化包装", "营销物料与溯源支持"],
       "buttonText": "获取详细方案",
       "style": "light"
+    },
+    {
+      "iconKey": "building",
+      "title": "广西学校和医院团餐净菜配送方案",
+      "desc": "面向广西学校食堂和医院后勤场景，提供净菜、分切配菜和标准化半成品配送，兼顾出餐效率、食安验收和稳定履约。",
+      "points": ["净菜分级清洗与标准包装", "半成品按菜谱和频次配送", "批次票证与温控记录随货交付", "开学季与住院高峰期保供预案"],
+      "buttonText": "获取详细方案",
+      "style": "dark",
+      "badge": "团餐场景",
+      "image": "/images/content/solutions/20260709-prepared-food-solution.jpg",
+      "imageAlt": "广西净菜加工车间与半成品配送场景"
     }
   ],
   "banner": {
